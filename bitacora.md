@@ -4,11 +4,12 @@
 ## Actividad 1: Representación de Datos en el Mundo Digital  
   
 ### Ejercicio 1:   
-    "En la Figura 2 se muestran los diferentes estados que se pueden representar usando una palabra binaria de 3 bits. Responde la pregunta de la imagen: ¿Cuántos estados diferentes se pueden representar usando N bits?"  
+    
+ **En la Figura 2 se muestran los diferentes estados que se pueden representar usando una palabra binaria de 3 bits. Responde la pregunta de la imagen: ¿Cuántos estados diferentes se pueden representar usando N bits?**   
 Respuesta: 2^N  
   
 ### Ejercicio 2:  
-    "Convierte el número decimal 22 a binario"  
+ **Convierte el número decimal 22 a binario**  
 Respuesta:  
     22 / 2 = 11, residuo 0  
     11 / 2 = 5, residuo 1  
@@ -18,17 +19,17 @@ Respuesta:
     Residuos de abajo hacia arriba, por lo tanto: 22 = 10110  
   
 ### Ejercicio 3:  
-    "¿Cuál es el resultado en decimal del número binario 10110?"  
+  **¿Cuál es el resultado en decimal del número binario 10110?**  
 Respuesta:  
     1 * (2^4) + 0 * (2^3) + 1 * (2^2) + 1 * (2^1) + 0 * (2^0) = 22  
   
 ### Ejercicio 4:  
-    "¿Qué número binario representa el carácter 'C' en ASCII?"  
+  **¿Qué número binario representa el carácter 'C' en ASCII?**  
 Respuesta:  
     01000011  
   
 ### Ejercicio 5:  
-    "Convierte el número flotante 5.75 a binario (explica los pasos)"  
+  **Convierte el número flotante 5.75 a binario (explica los pasos)**  
 Respuesta:  
     Parte entera: 5  
     5 / 2 = 2, residuo 1  
@@ -42,13 +43,13 @@ Respuesta:
     Por lo tanto, 5.75 = 101.11  
   
 ### Ejercicio 6:  
-    "¿Cuántos bytes se necesitan para almacenar la palabra “Hola” en ASCII?"  
+  **¿Cuántos bytes se necesitan para almacenar la palabra “Hola” en ASCII?**  
 Respuesta:  
     "Hola" tiene 4 letras y cada letra ocupa un byte, por lo que  
     4 * 1 = 4 bytes  
   
 ### Ejercicio 7:  
-    "¿Cuántos bits hay en 5 KB?"  
+  **¿Cuántos bits hay en 5 KB?**  
 Respuesta:  
     KB a Bytes:  
     5 * 1024 = 5120 Bytes  
@@ -56,14 +57,14 @@ Respuesta:
     5120 * 8 = 40960 Bits  
   
 ### Ejercicio 8:  
-    "Convierte el número decimal 255 a hexadecimal."  
+  **Convierte el número decimal 255 a hexadecimal.**  
 Respuesta:  
     255 / 16 = 15, residuo 15  
     Como 15 = F  
     255 = FF  
   
 ### Ejercicio 9:  
-    "¿Cuál es el valor hexadecimal de la secuencia binaria 11010110?"  
+  **¿Cuál es el valor hexadecimal de la secuencia binaria 11010110?**  
 Respuesta:  
     Agrupar en 4 bits: 1101 y 0110  
     1101: 8 + 4 + 0 + 1 = 13  ->  D  
@@ -72,8 +73,31 @@ Respuesta:
   
 ### Ejercicios finales de repaso:  
   
-"Explica, en tus propias palabras, por qué es necesario que las computadoras representen los datos en binario"  
+**Explica, en tus propias palabras, por qué es necesario que las computadoras representen los datos en binario**  
 Respuesta:  
-    Por diseño, ya que los componentes de una computadora solo tienen dos estados físicos, bien sean encendido y apagado, que se representan como 1 y 0, respectivamente    
-"Convierte el número binario 10011011 a decimal y a hexadecimal"  
+    Por diseño, ya que los componentes de una computadora solo tienen dos estados físicos, bien sean encendido y apagado, que se representan como 1 y 0, respectivamente  
+**Convierte el número binario 10011011 a decimal y a hexadecimal**  
+Respuesta:  
+    Binario a decimal:  
+    128 + 0 + 0 + 16 + 8 + 0 + 2 + 1 = 155  
+    Binrio a hexadecimal:  
+    1001: 8 + 0 + 0 + 1 = 9  
+    1011: 8 + 0 + 2 + 1 = 11  ->  B  
+    Por lo tanto: 10011011 = 155 = 9B  
+**Investiga y describe cómo se representa una imagen en formato PNG en el disco.**  
+Respuesta:  
+    "Una imagen en formato PNG se almacena en el disco como una secuencia de bytes organizada en bloques estructurados llamados bloques o chunks."  
+**Analiza la siguiente situación: ¿Qué sucede si intentas almacenar un número mayor al que puede representar un byte (por ejemplo, 300)? ¿Cómo lo maneja Python?**  
+Respuesta:  
+    Sucede un desbordamiento de entero y el sistema descarta el primer bit  
+    Por ejemplo, con el 300 = 100101100, que requiere de 9 bits  
+    El sistema no incluye el bit mas significativo, y quedaría así: 00101100 (el cual es 44)  
   
+  
+## Actividad 2: Representación de algoritmos  
+  
+### Ejercicio 1:  
+  
+**Investiga cuáles son los símbolos que se utilizan para representar cada operación de un algoritmo con un diagrama de flujo. Asegúrate de que la fuente es confiable, discute lo que encontraste con tus compañeros y con el profe. Cuando estés seguro/a de tener los símbolos correctos, consigna la información en la bitácora.**  
+Respuesta:  
+    
