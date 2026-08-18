@@ -220,3 +220,195 @@ Fin Si
 Fin  
 "  
 Diagrama de flujo:  
+![](Imagenes/DiagramaPesoAeronave.drawio.png)  
+  
+### Ejercicio 2:  
+  
+**Durante una inspección de rutina, se mide la temperatura de un motor de turbina. Si la temperatura es mayor a un valor crítico, se debe indicar "Peligro: sobrecalentamiento". Si está dentro del rango seguro, indicar "Operación normal". Si es demasiado baja, indicar "Motor frío – Calentar antes de operar"**  
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+Leer Temperatura  
+Si Temperatura < 50  
+  Mostrar "Motor frío – Calentar antes de operar"  
+Sino  
+  Si Temperatura > 100  
+    Mostrar "Peligro: sobrecalentamiento"  
+  Sino  
+    Mostrar "Operación normal"  
+Fin Si  
+Fin  
+"  
+Diagrama de flujo:  
+![](Imagenes/DiagramaMotor.drawio.png)  
+  
+### Ejercicio 3:  
+  
+**Un sistema debe registrar la altitud de vuelo cada 10 minutos durante una hora y mostrar todas las mediciones al final.**  
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+RegistroAltitudes = ""  
+Para i = 1 Hasta 6  
+  Minuto = i * 10  
+  Escribir "Ingrese la altitud al minuto ", Minuto  
+  Leer Altitud  
+  RegistroAltitudes = RegistroAltitudes + "[" + Minuto + " min: " + Altitud + "m] "  
+Fin Para  
+Mostrar "Mediciones registradas durante la hora: ", RegistroAltitudes  
+Fin  
+"  
+  
+### Ejercicio 4:  
+  
+**Durante un ensayo en banco de un motor a reacción, se mide el nivel de combustible cada minuto y se detiene el registro cuando el combustible baja del 10%. Mostrar el tiempo total de operación antes de llegar a ese punto**  
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+Leer CapacidadMax, Nivel  
+Tiempo = 0    
+Mientras Nivel >= CapacidadMax * 0.1  
+  Tiempo = Tiempo + 1  
+  Leer Nivel  
+Fin Mientras  
+Mostrar "Tiempo total de operación: ", Tiempo, " minutos"  
+Fin  
+"  
+  
+### Ejercicio 5:  
+  
+**Un sensor mide la aceleración vertical de la aeronave en intervalos de un segundo durante un trayecto de 2 minutos. Si el valor medido supera un umbral, indicar que se ha detectado turbulencia en ese instante. Al final, mostrar cuántas turbulencias se detectaron**  
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+Leer Umbral  
+TotalTurbulencias = 0  
+Para i = 1 Hasta 120  
+  Leer Aceleracion  
+  Si Aceleracion > Umbral  
+    Mostrar "Turbulencia detectada en el segundo: ", i  
+    TotalTurbulencias = TotalTurbulencias + 1  
+  Fin Si  
+Fin Para  
+Mostrar "Total de turbulencias detectadas: ", TotalTurbulencias  
+Fin  
+"  
+  
+### Ejercicio 6:  
+  
+**Un sistema mide cada 5 minutos la temperatura en cabina durante una hora. Si en algún momento se detecta una temperatura mayor a 27°C o menor a 18°C, debe indicar que se active el sistema de climatización**  
+Respuesta:  
+Pseudocódgio:  
+"  
+Inicio  
+Para i = 1 Hasta 12  
+  Minuto = i * 5  
+  Leer Temperatura  
+  Si Temperatura > 27 O Temperatura < 18  
+    Mostrar "Activar sistema de climatización. Anomalía en el minuto: ", Minuto  
+  Fin Si  
+Fin Para  
+Fin  
+"  
+  
+### Ejercicio 7:  
+  
+**Durante el abordaje, un sistema cuenta a los pasajeros que ingresan. Si el número total supera la capacidad máxima, el sistema debe detener el conteo y mostrar un mensaje de alerta**  
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+Leer CapacidadMax  
+TotalPasajeros = 0  
+Mientras TotalPasajeros <= CapacidadMax  
+  Leer Ingreso  
+  TotalPasajeros = TotalPasajeros + Ingreso  
+  Si TotalPasajeros > CapacidadMax  
+    Mostrar "Alerta: Capacidad máxima superada. Deteniendo conteo."  
+  Fin Si  
+Fin Mientras  
+Fin  
+"  
+  
+### Ejercicio 8:  
+  
+**Desarrollar un algoritmo que reciba datos de consumo de energía por hora de un satélite durante un día completo. Si en cualquier hora el consumo excede un límite crítico, debe registrarse como una alerta. Al final, mostrar el consumo total y el número de alertas generadas**  
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+Leer LimiteCritico  
+ConsumoTotal = 0  
+Alertas = 0  
+Para i = 1 Hasta 24  
+  Leer ConsumoHora  
+  ConsumoTotal = ConsumoTotal + ConsumoHora  
+  Si ConsumoHora > LimiteCritico  
+    Alertas = Alertas + 1  
+  Fin Si  
+Fin Para  
+Mostrar "Consumo total de energía en el día: ", ConsumoTotal  
+Mostrar "Número total de alertas generadas: ", Alertas  
+Fin  
+"  
+  
+### Ejercicio 9:  
+  
+**Una aeronave tiene varias bodegas de carga. El sistema debe permitir ingresar el peso cargado en cada bodega y verificar que:**  
+**- El peso total no exceda el máximo permitido.**  
+**- Ninguna bodega individual supere su límite.**  
+**Mostrar mensajes de advertencia si alguna condición no se cumple.**  
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+Leer NumBodegas, PesoMaxTotal  
+PesoTotal = 0  
+Para i = 1 Hasta NumBodegas  
+  Leer LimiteBodega, PesoBodega  
+  PesoTotal = PesoTotal + PesoBodega  
+  Si PesoBodega > LimiteBodega  
+    Mostrar "Advertencia: La bodega ", i, " supera su límite permitido."  
+  Fin Si  
+Fin Para  
+Si PesoTotal > PesoMaxTotal  
+  Mostrar "Advertencia General: El peso total excede el máximo permitido del avión."  
+Sino  
+  Mostrar "Check completado: Peso total dentro de los límites seguros."  
+Fin Si  
+Mostrar "Peso total cargado en la aeronave: ", PesoTotal  
+Fin  
+"  
+  
+### Ejercicio 10:  
+  
+**Durante la aproximación, un sistema recibe datos de altitud y velocidad cada 5 segundos hasta el aterrizaje. Si la velocidad excede el valor máximo seguro o la altitud no desciende adecuadamente, debe indicarse un mensaje de corrección de maniobra. Mostrar un resumen final de todos los avisos emitidos**  
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+Leer VelMax, Altitud  
+Tiempo = 0  
+ResumenAvisos = ""  
+AltitudAnterior = 999999  
+Mientras Altitud > 0  
+  Leer Velocidad  
+  Si Velocidad > VelMax O Altitud >= AltitudAnterior  
+    Mensaje = "Segundo " + Tiempo + " Corregir maniobra."  
+    Mostrar Mensaje  
+    ResumenAvisos = ResumenAvisos + Mensaje + " | "  
+  Fin Si  
+  AltitudAnterior = Altitud  
+  Tiempo = Tiempo + 5  
+  Leer Altitud  
+Fin Mientras  
+Mostrar "Aterrizaje completado."  
+Mostrar "Resumen de avisos emitidos: ", ResumenAvisos  
+Fin  
+"  
+  
+Gracias.
