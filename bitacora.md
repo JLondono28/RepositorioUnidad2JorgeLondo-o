@@ -148,6 +148,7 @@ Sino
 Fin Si  
 CostoTotal = CostoInicial - Descuento  
 Mostrar Descuento, CostoTotal  
+Fin  
 "  
 Diagrama de flujo:  
 ![](Imagenes/DiagramaDescuentoRopa.drawio.png)  
@@ -204,4 +205,18 @@ Las estructuras de control sirven para cambiar el flujo de un algoritmo, sirven 
 ### Ejercicio 1:  
   
 **En una pista de pruebas de aeronaves, el sistema debe verificar si el peso total de la aeronave, incluyendo combustible y carga, supera el límite máximo permitido para el despegue. Dependiendo del resultado, el sistema deberá indicar si la aeronave está lista para despegar o si debe reducir carga o combustible**
-Respuesta:
+Respuesta:  
+Pseudocódigo:  
+"  
+Inicio  
+Leer PesoMaximo, PesoTotal  
+Si PesoTotal > PesoMaximo  
+  Exceso = PesoTotal - PesoMaximo  
+  Mostrar "Despegue denegado. Debe reducir carga o combustible en: ", Exceso  
+Sino  
+  Disponible = PesoMaximo - PesoTotal
+  Mostrar "Aeronave lista para despegar. Peso disponible en Disponible"  
+Fin Si  
+Fin  
+"  
+Diagrama de flujo:  
